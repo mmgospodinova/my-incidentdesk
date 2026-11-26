@@ -4,6 +4,8 @@ What changed for the people who use IncidentDesk: on-call engineers, support and
 
 ## Unreleased
 
+- On-call engineers can check the installed IncidentDesk version with `incidentdesk --version`.
+
 ## 1.4.0
 
 - The daily report counts incidents by the local calendar day.
