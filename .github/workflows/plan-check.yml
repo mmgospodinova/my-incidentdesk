@@ -27,7 +27,7 @@ jobs:
             echo "A plan pull request may change only docs/plans/."
             exit 1
           fi
-      - name: Every plan has all five sections
+      - name: Every plan has all five sections.
         env:
           BASE: ${{ github.base_ref }}
         run: |
