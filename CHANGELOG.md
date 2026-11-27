@@ -4,6 +4,8 @@ What changed for the people who use IncidentDesk: on-call engineers, support and
 
 ## Unreleased
 
+- Customer-facing incidents keep their higher priority when opened at night or on weekends.
+
 ## 1.4.0
 
 - The daily report counts incidents by the local calendar day.
