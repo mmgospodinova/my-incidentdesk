@@ -22,3 +22,15 @@ def get_postmortem(session: Session, key: str) -> Postmortem | None:
 def missing_sections(postmortem: Postmortem) -> list[str]:
     """A postmortem may be published only when every required section is filled in."""
     return [name for name in REQUIRED_SECTIONS if not getattr(postmortem, name)]
+
+
+def postmortem_markdown(postmortem: Postmortem) -> str:
+    actions = "\n".join(f"- [ ] {action}" for action in postmortem.actions)
+    return (
+        f"# {postmortem.title}\n\n"
+        f"Incident: {postmortem.incident.key}\n\n"
+        f"## Summary\n\n{postmortem.summary}\n\n"
+        f"## Impact\n\n{postmortem.impact}\n\n"
+        f"## Root cause\n\n{postmortem.root_cause}\n\n"
+        f"## Actions\n\n{actions}\n"
+    )
